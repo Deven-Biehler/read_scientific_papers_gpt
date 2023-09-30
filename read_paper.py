@@ -24,8 +24,6 @@ parser = argparse.ArgumentParser(description='Read a paper and answer questions 
 
 # Add arguments
 parser.add_argument('-c','--configfile', type=str, help='the path to the paper')
-parser.add_argument('-q','--query', type=str, help='the query to ask about the paper')
-
 
 # Parse the arguments
 args = parser.parse_args()
@@ -40,20 +38,27 @@ os.environ["OPENAI_API_KEY"] = config['gptAPIKey']
 ########################    MAIN    ##############################
 def main():
     folder_path = config["folder_path"]
-    pdf_pattern = os.path.join(folder_path, "*.pdf")
-    pdf_files = glob.glob(pdf_pattern)
-    for paperFile in pdf_files:
-
-        if not os.path.exists(paperFile):
-            sys.exit("Error: Paper file does not exist")
-
-        paperreader = PaperReader(config)
-        # docsearch, chain = create_model(paperFile)
-
-        ## Query the document
-        with open("querys.json", "r") as json_file:
+    if config["file_type"] == 'pdf':
+        file_extension = os.path.join(folder_path, "*.pdf")
+        papers = glob.glob(file_extension)
+    elif config["file_type"] == 'json':
+        file_extension = os.path.join(folder_path, "*.json")
+        papers = glob.glob(file_extension)
+    elif config["file_type"] == 'both':
+        file_extension = os.path.join(folder_path, "*.pdf")
+        papers = glob.glob(file_extension)
+    for paperFile in papers:
+        with open("queries.json", "r") as json_file:
             queryList = json.load(json_file)
         for query in queryList:
+            if not os.path.exists(paperFile):
+                sys.exit("Error: Paper file does not exist")
+
+            paperreader = PaperReader(config, paperFile)
+            # docsearch, chain = create_model(paperFile)
+
+            ## Query the document
+            
             out = paperreader.query_document(query)
             if config['document_output']:
                 file_path_no_extension = os.path.splitext(paperFile)[0]
@@ -75,8 +80,8 @@ def main():
             print("-"*100)
 
 class PaperReader:
-    def __init__(self, config):
-        self.paperFile = config['paper_path'] ## path to the paper
+    def __init__(self, config, paperFile):
+        self.paperFile = paperFile ## path to the paper
         self.databasedir = "cachedata" ## directory to store the cache files
         self.yamldb = "paper_ids.yaml" ## yaml file to store the cache file names
         self.llm = config['llm'] # large language model to use for the question answering
@@ -144,7 +149,22 @@ class PaperReader:
             elif config["file_type"] == 'json':
                 with open(self.paperFile, 'r', encoding='latin-1') as f:
                     raw_text = f.read()
-
+            elif config["file_type"] == "both":
+                root, extension = os.path.splitext(self.paperFile)
+                pdf_paper = root + ".pdf"
+                json_paper = root + ".json"
+                reader = PdfReader(pdf_paper)
+            
+                # read data from the file and put them into a variable called raw_text
+                raw_text = ''
+                for i, page in enumerate(reader.pages):
+                    text = page.extract_text()
+                    if text:
+                        raw_text += text
+                table_text = ''
+                with open(json_paper, 'r', encoding='latin-1') as f:
+                    table_text = f.read()
+                raw_text += table_text
 
             ## Split the text into chunks of 1000 characters each with 200 characters overlap between chunks 
             ## (so that we don't miss any information) 
@@ -198,32 +218,32 @@ class PaperReader:
             with open(self.chaindatafile1, 'rb') as f:
                 self.chain = pickle.load(f)
 
-    def _improve_output(self, texts):
-        '''
-        Improve the output by using the previous queries
-        '''
-        outdocfile = self.paperFile.replace(".pdf", "_output.md")
+    # def _improve_output(self, texts):
+    #     '''
+    #     Improve the output by using the previous queries
+    #     '''
+    #     outdocfile = self.paperFile.replace(".pdf", "_output.md")
         
-        if os.path.exists(outdocfile):
-            with open(outdocfile, 'r') as f:
-                text_doc = f.read()
-            text_doc.replace("="*100, "")
-            text_doc.replace("-"*100, "")
-            total_len = len(text_doc)
+    #     if os.path.exists(outdocfile):
+    #         with open(outdocfile, 'r') as f:
+    #             text_doc = f.read()
+    #         text_doc.replace("="*100, "")
+    #         text_doc.replace("-"*100, "")
+    #         total_len = len(text_doc)
             
-            # print('len of text doc', len(texts_doc))
-            if total_len > 1000:
-                text_splitter_imp = CharacterTextSplitter(        
-                    separator = "\n",
-                    chunk_size = 1000,
-                    chunk_overlap  = 200,
-                    length_function = len,
-                )
-                texts_doc = text_splitter_imp.split_text(text_doc)
-                texts = texts + texts_doc
-                if config['output_stats']:
-                    print("Using the previous queries to improve the answers")
-        return texts
+    #         # print('len of text doc', len(texts_doc))
+    #         if total_len > 1000:
+    #             text_splitter_imp = CharacterTextSplitter(        
+    #                 separator = "\n",
+    #                 chunk_size = 1000,
+    #                 chunk_overlap  = 200,
+    #                 length_function = len,
+    #             )
+    #             texts_doc = text_splitter_imp.split_text(text_doc)
+    #             texts = texts + texts_doc
+    #             if config['output_stats']:
+    #                 print("Using the previous queries to improve the answers")
+    #     return texts
 
     def update_chain_cache(self):
         '''
