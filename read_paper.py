@@ -33,7 +33,7 @@ with open(args.configfile, 'r') as f:
     config = yaml.safe_load(f)
 # print(config)
 
-os.environ["OPENAI_API_KEY"] = config['gpt_API_key']
+os.environ["OPENAI_API_KEY"] = config['gptAPIKey']
 
 
 ########################    MAIN    ##############################
@@ -136,8 +136,8 @@ class PaperReader:
                     if text:
                         raw_text += text
             elif config["file_type"] == 'json':
-                with open(self.paperFile, 'r', encoding='utf-8') as f:
-                    raw_text = str(json.load(f))
+                with open(self.paperFile, 'r', encoding='latin-1') as f:
+                    raw_text = f.read()
 
 
             ## Split the text into chunks of 1000 characters each with 200 characters overlap between chunks 
