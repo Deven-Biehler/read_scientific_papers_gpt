@@ -14,6 +14,7 @@ import os, sys
 import yaml
 import uuid
 import json
+import glob
 
 import argparse
 
@@ -38,35 +39,38 @@ os.environ["OPENAI_API_KEY"] = config['gptAPIKey']
 
 ########################    MAIN    ##############################
 def main():
-    paperFile = config['paper_path']
+    folder_path = config["folder_path"]
+    pdf_pattern = os.path.join(folder_path, "*.pdf")
+    pdf_files = glob.glob(pdf_pattern)
+    for paperFile in pdf_files:
 
-    if not os.path.exists(paperFile):
-        sys.exit("Error: Paper file does not exist")
+        if not os.path.exists(paperFile):
+            sys.exit("Error: Paper file does not exist")
 
-    paperreader = PaperReader(config)
-    # docsearch, chain = create_model(paperFile)
+        paperreader = PaperReader(config)
+        # docsearch, chain = create_model(paperFile)
 
-    ## Query the document
-    query = args.query
-    out = paperreader.query_document(query)
-    if config['document_output']:
-        file_path_no_extension = os.path.splitext(paperFile)[0]
-        
-        outdoc = file_path_no_extension +"_output.md"
-        # print(outdoc)
-        if config['clear_cache']:
-            if os.path.exists(outdoc):
-                os.remove(outdoc)
-        with open(outdoc, 'a') as f:
-            # f.write("====================\n")
-            f.write("="*100+"\n")
-            f.write("QUERY: {}\n".format(query.encode('utf-8')))
-            f.write("OUTPUT: {}\n".format(out.encode('utf-8')))
-            f.write("\n")
-            # f.write("-"*100+"\n")
-    print("="*100)
-    print(out)
-    print("-"*100)
+        ## Query the document
+        query = args.query
+        out = paperreader.query_document(query)
+        if config['document_output']:
+            file_path_no_extension = os.path.splitext(paperFile)[0]
+            
+            outdoc = file_path_no_extension +"_output.md"
+            # print(outdoc)
+            if config['clear_cache']:
+                if os.path.exists(outdoc):
+                    os.remove(outdoc)
+            with open(outdoc, 'a') as f:
+                # f.write("====================\n")
+                f.write("="*100+"\n")
+                f.write("QUERY: {}\n".format(query.encode('utf-8')))
+                f.write("OUTPUT: {}\n".format(out.encode('utf-8')))
+                f.write("\n")
+                # f.write("-"*100+"\n")
+        print("="*100)
+        print(out)
+        print("-"*100)
 
 class PaperReader:
     def __init__(self, config):
