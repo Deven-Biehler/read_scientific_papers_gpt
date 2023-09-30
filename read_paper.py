@@ -51,26 +51,28 @@ def main():
         # docsearch, chain = create_model(paperFile)
 
         ## Query the document
-        query = args.query
-        out = paperreader.query_document(query)
-        if config['document_output']:
-            file_path_no_extension = os.path.splitext(paperFile)[0]
-            
-            outdoc = file_path_no_extension +"_output.md"
-            # print(outdoc)
-            if config['clear_cache']:
-                if os.path.exists(outdoc):
-                    os.remove(outdoc)
-            with open(outdoc, 'a') as f:
-                # f.write("====================\n")
-                f.write("="*100+"\n")
-                f.write("QUERY: {}\n".format(query.encode('utf-8')))
-                f.write("OUTPUT: {}\n".format(out.encode('utf-8')))
-                f.write("\n")
-                # f.write("-"*100+"\n")
-        print("="*100)
-        print(out)
-        print("-"*100)
+        with open("querys.json", "r") as json_file:
+            queryList = json.load(json_file)
+        for query in queryList:
+            out = paperreader.query_document(query)
+            if config['document_output']:
+                file_path_no_extension = os.path.splitext(paperFile)[0]
+                
+                outdoc = file_path_no_extension +"_output.md"
+                # print(outdoc)
+                if config['clear_cache']:
+                    if os.path.exists(outdoc):
+                        os.remove(outdoc)
+                with open(outdoc, 'a') as f:
+                    # f.write("====================\n")
+                    f.write("="*100+"\n")
+                    f.write("QUERY: {}\n".format(query.encode('utf-8')))
+                    f.write("OUTPUT: {}\n".format(out.encode('utf-8')))
+                    f.write("\n")
+                    # f.write("-"*100+"\n")
+            print("="*100)
+            print(out)
+            print("-"*100)
 
 class PaperReader:
     def __init__(self, config):

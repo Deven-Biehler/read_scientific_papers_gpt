@@ -6,7 +6,7 @@
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/read_paper.py",
-            "args": ["-c", "config.yaml", "-q", "summarize the paper"],
+            "args": ["-c", "config.yaml"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
         }
