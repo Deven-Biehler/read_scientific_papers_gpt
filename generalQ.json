@@ -1,0 +1,30 @@
+[
+
+
+"Please carefully read the 1st page of the scientific paper. Does it contain title of the paper? If so, please show the title of the paper in a standardized python dictionary below: {'dataType': 'general', 'dataType2': 'title', 'data': [{'title': title of the paper}]}. The title is usually located before the list of authors. Please do not reply anything except the python dictionary. If you could not find title of paper, please do not make up any title. Please simply and strictly reply '{'dataType': 'general', 'dataType2': 'title', 'data': [{'title': None}]}' and nothing else.",
+
+"Please carefully read the 1st page of the scientific paper. Does it contain title of the paper? If so, please show the title of the paper in a standardized python dictionary below: {'dataType': 'general', 'dataType2': 'title', 'data': [{'title': title of the paper}]}. The title is usually located before the Abstract. Please do not reply anything except the python dictionary. If you could not find title of paper, please do not make up any title. Please simply and strictly reply '{'dataType': 'general', 'dataType2': 'title', 'data': [{'title': None}]}' and nothing else.",
+
+"Please carefully read the scientific paper. Does it contain DOI, or digital object identifier, of the paper? If so, please show the DOI of the paper in a standardized python dictionary below: {'dataType': 'general', 'dataType2': 'doi', 'data': [{'doi': doi of paper}]}. Please do not reply anything except the python dictionary. If you could not find title of paper, please do not make up any title. Please simply and strictly reply '{'dataType': 'general', 'dataType2': 'doi', 'data': [{'doi': None}]}' and nothing else.",
+
+"Please carefully read the scientific paper. Does it contain https link of doi? If so, please show the link of doi of the paper in a standardized python dictionary below: {'dataType': 'general', 'dataType2': 'doi' , 'data': [{'doi': link of doi}]}. Please do not reply anything except the python dictionary. If you could not find title of paper, please do not make up any title. Please simply and strictly reply '{'dataType': 'general', 'dataType2': 'doi', 'data': [{'doi': None}]}' and nothing else.",
+
+"Please carefully read the scientific paper. Does it contain doi (or DOI)? If so, please show the doi of the paper in a standardized python dictionary below: {'dataType': 'doi', 'data': [{'doi': doi}]}. Please do not reply anything except the python dictionary. The doi information can usually be found after copyright information “All rights reserved”. If you could not find title of paper, please do not make up any doi. Please simply and strictly reply '{'dataType': 'doi', 'data': [{'doi': None}]}' and nothing else."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

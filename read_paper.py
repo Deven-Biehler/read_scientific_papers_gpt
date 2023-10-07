@@ -15,8 +15,11 @@ import yaml
 import uuid
 import json
 import glob
+import time
 
 import argparse
+
+from questionFunction import TDquestions
 
 
 # Create the parser
@@ -37,6 +40,15 @@ os.environ["OPENAI_API_KEY"] = config['gptAPIKey']
 
 ########################    MAIN    ##############################
 def main():
+    questionClass = TDquestions()
+    queryList = []
+    for query in questionClass.generalQuestion():
+        queryList.append(query)
+    for query in questionClass.enthalpyQuestion():
+        queryList.append(query)
+    for query in questionClass.CpQuestion():
+        queryList.append(query)
+
     folder_path = config["folder_path"]
     if config["file_type"] == 'pdf':
         file_extension = os.path.join(folder_path, "*.pdf")
@@ -48,36 +60,46 @@ def main():
         file_extension = os.path.join(folder_path, "*.pdf")
         papers = glob.glob(file_extension)
     for paperFile in papers:
-        with open("queries.json", "r") as json_file:
-            queryList = json.load(json_file)
-        for query in queryList:
+        outdoc = "output.json"
+        try:
+            with open(outdoc, "r") as json_file:
+                json_data = json.load(json_file)
+        except FileNotFoundError:
+            # If the file doesn't exist yet, create an empty list
+            json_data = []
+        paperData = {}
+        file_path_no_extension = os.path.splitext(paperFile)[0]
+        if file_path_no_extension + ".pdf" not in json_data:
             if not os.path.exists(paperFile):
                 sys.exit("Error: Paper file does not exist")
+            paperData["paperFileName"] = file_path_no_extension + ".pdf"
+            result_list = []
+            for query in queryList:
+                time.sleep(5)
 
-            paperreader = PaperReader(config, paperFile)
-            # docsearch, chain = create_model(paperFile)
+                paperreader = PaperReader(config, paperFile)
+                # docsearch, chain = create_model(paperFile)
 
-            ## Query the document
+                ## Query the document
             
-            out = paperreader.query_document(query)
+                out = paperreader.query_document(query)
+                result_list.append(out)
+
+                print("="*100)
+                print(out)
+                print("-"*100)
+            paperData["extractData"] = result_list
+            json_data.append(paperData)
             if config['document_output']:
-                file_path_no_extension = os.path.splitext(paperFile)[0]
-                
-                outdoc = file_path_no_extension +"_output.md"
+
                 # print(outdoc)
                 if config['clear_cache']:
                     if os.path.exists(outdoc):
                         os.remove(outdoc)
-                with open(outdoc, 'a') as f:
-                    # f.write("====================\n")
-                    f.write("="*100+"\n")
-                    f.write("QUERY: {}\n".format(query.encode('utf-8')))
-                    f.write("OUTPUT: {}\n".format(out.encode('utf-8')))
-                    f.write("\n")
-                    # f.write("-"*100+"\n")
-            print("="*100)
-            print(out)
-            print("-"*100)
+                with open(outdoc, "w") as json_file:
+                    json.dump(json_data, json_file, indent=4)
+                
+            
 
 class PaperReader:
     def __init__(self, config, paperFile):

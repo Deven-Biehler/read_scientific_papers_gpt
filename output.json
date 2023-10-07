@@ -1,0 +1,25 @@
+[
+    {
+        "paperFileName": "./papers\\25f9cd39efdf4b59727f32db7b6b4388.pdf",
+        "Response": [
+            "{'dataType': 'general', 'dataType2': 'title', 'data': [{'title': None}]}",
+            "{'dataType': 'general', 'dataType2': 'title', 'data': [{'title': None}]}",
+            "{'dataType': 'general', 'dataType2': 'doi', 'data': [{'doi': None}]}",
+            "{'dataType': 'general', 'dataType2': 'doi', 'data': [{'doi': None}]}",
+            "{'dataType': 'doi', 'data': [{'doi': '10.1016/j.jssc.2007.11.003'}]}",
+            "{'dataType': 'enthalpy', 'dataType2': 'enthalpyType', 'data': None}",
+            "{'dataType': 'enthalpy', 'dataType2': 'enthalpy measurement', 'data': None}",
+            "{'dataType': 'enthalpy', 'dataType2': 'drop calorimetry parameter', 'data':[{'Does drop?': False, 'Solvent type': '', 'Solvent temperature': '', 'Number of drops': '', 'Flush gas': ''}]}",
+            "{'dataType': 'enthalpy', 'dataType2': 'enthalpy of dissolution', 'data': None}",
+            "{'dataType': 'enthalpy', 'dataType2': 'formation enthalpy', 'data': None}",
+            "{'dataType': 'enthalpy', 'dataType2': 'formation enthalpy', 'data': None}",
+            "{'dataType': 'enthalpy', 'dataType2': 'Drop solution enthalpy', 'data': None}",
+            "I'm sorry, but the provided context does not contain specific heat capacity (Cp) values at different temperatures for any materials.",
+            "{'dataType': 'heat capacity', 'dataType2': 'captions', 'data': None}",
+            "{'dataType': 'heat capacity', 'dataType2': 'materialsFormula', 'data':[{'Material': 'Fe2O3', 'Formula': 'Fe2O3'}, {'Material': 'NiO', 'Formula': 'NiO'}, {'Material': 'RFeO3', 'Formula': 'RFeO3'}, {'Material': 'R3Fe5O12', 'Formula': 'R3Fe5O12'}]}",
+            "{'dataType': 'heat capacity', 'dataType2': 'materialsFormula', 'data': [{'Material': 'RFeO3(s)', 'Formula': ''}, {'Material': 'Fe2O3', 'Formula': ''}, {'Material': 'NiO', 'Formula': ''}, {'Material': 'R3Fe5O12(s)', 'Formula': ''}]}",
+            "{'dataType': 'heat capacity', 'dataType2': 'temperature range', 'data':[{'temperature range':'130\u2013320 K'}, {'temperature range':'300\u2013860 K'}]}",
+            "{'dataType': 'heat capacity', 'dataType2': 'methods', 'data': [{'method': 'Differential scanning calorimetry (DSC)'}, {'method': 'Classical three-step method in the continuous heating mode'}, {'method': 'Heat flow as a function of temperature measurement'}, {'method': ''}]}"
+        ]
+    }
+]
