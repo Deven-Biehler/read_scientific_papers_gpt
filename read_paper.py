@@ -75,7 +75,7 @@ def main():
             paperData["paperFileName"] = file_path_no_extension + ".pdf"
             result_list = []
             for query in queryList:
-                time.sleep(5)
+                time.sleep(2)
 
                 paperreader = PaperReader(config, paperFile)
                 # docsearch, chain = create_model(paperFile)
@@ -83,10 +83,17 @@ def main():
                 ## Query the document
             
                 out = paperreader.query_document(query)
-                result_list.append(out)
+                outDict = {}
+                try:
+                    outDict = eval(out)
+                except:
+                    outDict = {'answerStr': out, 'question': query}
 
+                outDict['timeStamp'] = round(time.time())
+
+                result_list.append(outDict)
                 print("="*100)
-                print(out)
+                print(outDict)
                 print("-"*100)
             paperData["extractData"] = result_list
             json_data.append(paperData)
@@ -233,7 +240,7 @@ class PaperReader:
         if not os.path.exists(self.chaindatafile1):
             ## Create a question answering chain using GPT-3.5-turbo model from the langchain library 
             ## (a library for building language chains) 
-            self.chain = load_qa_chain(ChatOpenAI(temperature=config['gpt_temperature'], model_name=self.llm), chain_type="stuff")
+            self.chain = load_qa_chain(ChatOpenAI(temperature=config['gpt_temperature'], model_name=self.llm, request_timeout=120), chain_type="stuff")
             with open(self.chaindatafile1, 'wb') as f:
                 pickle.dump(self.chain, f)
         else:
