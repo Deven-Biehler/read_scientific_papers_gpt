@@ -40,14 +40,15 @@ os.environ["OPENAI_API_KEY"] = config['gptAPIKey']
 
 ########################    MAIN    ##############################
 def main():
+
+    # Add questions to queryList
     questionClass = TDquestions()
     queryList = []
-    for query in questionClass.generalQuestion():
+    for query in questionClass.entrolpyQuestion():
         queryList.append(query)
-    for query in questionClass.enthalpyQuestion():
+    for query in questionClass.freeEnergyQuestion():
         queryList.append(query)
-    for query in questionClass.CpQuestion():
-        queryList.append(query)
+
 
     folder_path = config["folder_path"]
     if config["file_type"] == 'pdf':
