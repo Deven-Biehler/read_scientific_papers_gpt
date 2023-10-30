@@ -44,7 +44,7 @@ def main():
     # Add questions to queryList
     questionClass = TDquestions()
     queryList = []
-    for query in questionClass.entrolpyQuestion():
+    for query in questionClass.entropyQuestion():
         queryList.append(query)
     for query in questionClass.freeEnergyQuestion():
         queryList.append(query)

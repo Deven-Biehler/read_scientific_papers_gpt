@@ -29,17 +29,17 @@ class TDquestions():
         
     #     return CpQList
     
-    def entrolpyQuestion(self):
-        with open(self.enthalpyQuestionPath, 'r', encoding='utf-8') as f:
-            entrolpyQList = json.load(f)
+    def entropyQuestion(self):
+        with open(self.entropyQuestionPath, 'r', encoding='utf-8') as f:
+            entropyQList = json.load(f)
         
-        return entrolpyQList
+        return entropyQList
     
-    def freeEnergyQuestion(self):
-        with open(self.freeEnergyPath, 'r', encoding='utf-8') as f:
-            freeEnergyQList = json.load(f)
+    # def freeEnergyQuestion(self):
+    #     with open(self.freeEnergyPath, 'r', encoding='utf-8') as f:
+    #         freeEnergyQList = json.load(f)
         
-        return freeEnergyQList
+    #     return freeEnergyQList
 
 
 if __name__ == "__main__":
