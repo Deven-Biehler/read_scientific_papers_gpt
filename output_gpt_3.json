@@ -17144,5 +17144,2584 @@
                 "timeStamp": 1697315459
             }
         ]
+    },
+    {
+        "paperFileName": "./papers\\00dd1de0ca18ef63ffcaf14916c69d84.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699390795
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699390799
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699390805
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699390810
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\049c0533afd3fe7b69b3b062b39b048c.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699390816
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699390822
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699390826
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699390831
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\099057e7c9376705ca09949d3f1b49bc.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "calculated from Van \u2018t Hoff slopes and intercepts",
+                "data": [
+                    {
+                        "Material": "La",
+                        "Formula": "LaH",
+                        "Entropy": 13.7,
+                        "Error": "",
+                        "Unit": "cal deg-1mole-1"
+                    },
+                    {
+                        "Material": "Ca-La",
+                        "Formula": "Ca0.873La0.127H2.687",
+                        "Entropy": 17.5,
+                        "Error": "",
+                        "Unit": "cal deg-1mole-1"
+                    },
+                    {
+                        "Material": "Ca-La",
+                        "Formula": "Ca0.733La0.267H2.440",
+                        "Entropy": 15.1,
+                        "Error": "",
+                        "Unit": "cal deg-1mole-1"
+                    },
+                    {
+                        "Material": "Ca-La",
+                        "Formula": "Ca0.584La0.416H2.296",
+                        "Entropy": 15.9,
+                        "Error": "",
+                        "Unit": "cal deg-1mole-1"
+                    }
+                ],
+                "timeStamp": 1699390858
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "Van \u2018t Hoff \u201cisocomps\u201d of log PTorr vs. 1/ T\u201dK were calculated for various values of 12 for each of the four metal ratios",
+                "data": [
+                    {
+                        "Material": "La",
+                        "Formula": "LaH",
+                        "reaction": "",
+                        "Entropy change": "13.7",
+                        "Error": "",
+                        "Unit": "cal deg-\u2018mole-"
+                    },
+                    {
+                        "Material": "La-Ca",
+                        "Formula": "LaH-CaH",
+                        "reaction": "",
+                        "Entropy change": "17.5",
+                        "Error": "",
+                        "Unit": "cal deg-\u2018mole-"
+                    },
+                    {
+                        "Material": "La-Ca",
+                        "Formula": "LaH-CaH",
+                        "reaction": "",
+                        "Entropy change": "15.5",
+                        "Error": "",
+                        "Unit": "cal deg-\u2018mole-"
+                    },
+                    {
+                        "Material": "La-Ca",
+                        "Formula": "LaH-CaH",
+                        "reaction": "",
+                        "Entropy change": "13.3",
+                        "Error": "",
+                        "Unit": "cal deg-\u2018mole-"
+                    },
+                    {
+                        "Material": "La-Ca",
+                        "Formula": "LaH-CaH",
+                        "reaction": "",
+                        "Entropy change": "15.1",
+                        "Error": "",
+                        "Unit": "cal deg-\u2018mole-"
+                    },
+                    {
+                        "Material": "La-Ca",
+                        "Formula": "LaH-CaH",
+                        "reaction": "",
+                        "Entropy change": "13.7",
+                        "Error": "",
+                        "Unit": "cal deg-\u2018mole-"
+                    },
+                    {
+                        "Material": "La-Ca",
+                        "Formula": "LaH-CaH",
+                        "reaction": "",
+                        "Entropy change": "15.9",
+                        "Error": "",
+                        "Unit": "cal deg-\u2018mole-"
+                    },
+                    {
+                        "Material": "La-Ca",
+                        "Formula": "LaH-CaH",
+                        "reaction": "",
+                        "Entropy change": "14.9",
+                        "Error": "",
+                        "Unit": "cal deg-\u2018mole-"
+                    }
+                ],
+                "timeStamp": 1699390887
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "solution entropy"
+                    }
+                ],
+                "timeStamp": 1699390891
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699390898
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\0d01eec21e046141495e617e22163af3.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699390903
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699390908
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699390913
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699390918
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\0e7232ff2403fd12ea23046aa112191b.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699390924
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699390929
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699390935
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699390941
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\1f44853660a89eb44dadac2efb186c6e.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699390946
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699390950
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699390955
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699390959
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\205e574c817f9d17f9473ff9a915c761.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699390964
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699390969
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "magnetic entropy"
+                    }
+                ],
+                "timeStamp": 1699390976
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": [
+                    {
+                        "Measurement": "heat capacity data"
+                    },
+                    {
+                        "Measurement": "magnetic contribution"
+                    },
+                    {
+                        "Measurement": "computation from thermodynamic functions"
+                    }
+                ],
+                "timeStamp": 1699390983
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\22377cf861511cbba1bf3707abeca930.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699390987
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699390992
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "relative partial molal entropy"
+                    },
+                    {
+                        "Type": "entropy of solution"
+                    }
+                ],
+                "timeStamp": 1699390997
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391003
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\28049c9d954ef1fcf8386d937f927954.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391009
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391014
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391020
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391024
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\2d96b3d982654c791aae2acbe9843e7d.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391029
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391034
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391039
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391046
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\2f42b5ff4999ca2cee636a1c4b9ca4ec.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391052
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391057
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "second-law standard molar entropies"
+                    },
+                    {
+                        "Type": "absolute standard molar entropies"
+                    }
+                ],
+                "timeStamp": 1699391065
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391070
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\31bef5d8c30776e1db0a3011f440d078.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391075
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391080
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391085
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391089
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\3f18888747ccf62791ea6bcf3ae22d3b.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "estimation based on high pressure work",
+                "data": [
+                    {
+                        "Material": "Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "1.5",
+                        "Error": "0.5",
+                        "Unit": "Cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-78",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-76",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-75",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-73",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-72",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-71",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-70",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-73",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-73",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-72",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    },
+                    {
+                        "Material": "cubic Eu2O3",
+                        "Formula": "Eu2O3",
+                        "Entropy": "-72",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-1"
+                    }
+                ],
+                "timeStamp": 1699391151
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "cubic EuzOa",
+                        "Formula": "Eu2O3",
+                        "reaction": "cubic EuzOa to monoclinic EuzO,",
+                        "Entropy change": "1.5",
+                        "Error": "0.5",
+                        "Unit": "Cal,, K-r mol-"
+                    },
+                    {
+                        "Material": "cubic EuzOa",
+                        "Formula": "Eu2O3",
+                        "reaction": "formation of cubic EuzOa",
+                        "Entropy change": "-78",
+                        "Error": "2",
+                        "Unit": "calth K-l mol-"
+                    }
+                ],
+                "timeStamp": 1699391167
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "transition entropy"
+                    },
+                    {
+                        "Type": "formation entropy"
+                    }
+                ],
+                "timeStamp": 1699391174
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391180
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\4060387468e10f414be9e38c6db2adad.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391185
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391190
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391194
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391198
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\4474925bec1a30d3cd0b6d5fa80ab3a1.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "CeRu2Si2",
+                        "Formula": "CeRu2Si2",
+                        "Entropy": "0,52",
+                        "Error": "",
+                        "Unit": "Rln2"
+                    },
+                    {
+                        "Material": "Theoretical one",
+                        "Formula": "",
+                        "Entropy": "0,45",
+                        "Error": "",
+                        "Unit": "Rln2"
+                    }
+                ],
+                "timeStamp": 1699391211
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "CeRu2Si2",
+                        "Formula": "CeRu2Si2",
+                        "reaction": "",
+                        "Entropy change": "0.95Rln2",
+                        "Error": "",
+                        "Unit": ""
+                    },
+                    {
+                        "Material": "(CeO_8LaO_$Ru2Si2",
+                        "Formula": "(CeO_8LaO_$Ru2Si2",
+                        "reaction": "",
+                        "Entropy change": "S/Rln2=0.85",
+                        "Error": "",
+                        "Unit": ""
+                    }
+                ],
+                "timeStamp": 1699391224
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391229
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391233
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\493758ffea0cff66bf4c4d1fd0d6ebde.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "calculated from the low-temperature heat capacities",
+                "data": [
+                    {
+                        "Material": "EuO",
+                        "Formula": "EuO",
+                        "Entropy": "S\u201d(298.15 K)",
+                        "Error": "",
+                        "Unit": "Cal, K-l mol-l"
+                    },
+                    {
+                        "Material": "EuS",
+                        "Formula": "EuS",
+                        "Entropy": "S\u201d(298.15 K)",
+                        "Error": "",
+                        "Unit": "Cal, K-l mol-l"
+                    },
+                    {
+                        "Material": "EuSe",
+                        "Formula": "EuSe",
+                        "Entropy": "S\u201d(298.15 K)",
+                        "Error": "",
+                        "Unit": "Cal, K-l mol-l"
+                    },
+                    {
+                        "Material": "EuTe",
+                        "Formula": "EuTe",
+                        "Entropy": "S\u201d(298.15 K)",
+                        "Error": "",
+                        "Unit": "Cal, K-l mol-l"
+                    }
+                ],
+                "timeStamp": 1699391258
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391263
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "standard entropy"
+                    },
+                    {
+                        "Type": "entropy of formation"
+                    }
+                ],
+                "timeStamp": 1699391269
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": [
+                    {
+                        "Measurement": "from heat capacity"
+                    },
+                    {
+                        "Measurement": "reference from previous studies"
+                    }
+                ],
+                "timeStamp": 1699391274
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\54d4c1479486573e24ac727cb97b1db3.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391279
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391283
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391288
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391293
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\5968bfe77fbd8ae613e58f417b57ad17.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "La",
+                        "Formula": "",
+                        "Entropy": 56.9,
+                        "Error": 2.5,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Pr",
+                        "Formula": "",
+                        "Entropy": 73.9,
+                        "Error": 4.2,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Nd",
+                        "Formula": "",
+                        "Entropy": 71.1,
+                        "Error": 4.2,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Gd",
+                        "Formula": "",
+                        "Entropy": 67.95,
+                        "Error": 0.84,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Dy",
+                        "Formula": "",
+                        "Entropy": 74.89,
+                        "Error": 0.84,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Ho",
+                        "Formula": "",
+                        "Entropy": 75.0,
+                        "Error": 1.7,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Er",
+                        "Formula": "",
+                        "Entropy": 73.2,
+                        "Error": 1.0,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "LaF3",
+                        "Formula": "",
+                        "Entropy": 106.98,
+                        "Error": 0.11,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "PrF3",
+                        "Formula": "",
+                        "Entropy": 121.22,
+                        "Error": 0.12,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "NdF3",
+                        "Formula": "",
+                        "Entropy": 120.8,
+                        "Error": 0.3,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "GdF3",
+                        "Formula": "",
+                        "Entropy": 120,
+                        "Error": 5,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "DyF3",
+                        "Formula": "",
+                        "Entropy": 120,
+                        "Error": 5,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "HoF3",
+                        "Formula": "",
+                        "Entropy": 120,
+                        "Error": 5,
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "ErF3",
+                        "Formula": "",
+                        "Entropy": 120,
+                        "Error": 5,
+                        "Unit": "JK-1 mol-1"
+                    }
+                ],
+                "timeStamp": 1699391330
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "La",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "56.9",
+                        "Error": "2.5",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Pr",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "73.9",
+                        "Error": "4.2",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Nd",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "71.1",
+                        "Error": "4.2",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Gd",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "67.95",
+                        "Error": "0.84",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Dy",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "74.89",
+                        "Error": "0.84",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Ho",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "75.0",
+                        "Error": "1.7",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "Er",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "73.2",
+                        "Error": "1.0",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "LaF3",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "106.98",
+                        "Error": "0.11",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "PrF3",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "121.22",
+                        "Error": "0.12",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "NdF3",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "120.8",
+                        "Error": "0.3",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "F2",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "202.67",
+                        "Error": "0.20",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "GdF3",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "120",
+                        "Error": "5",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "DyF3",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "120",
+                        "Error": "5",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "HoF3",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "120",
+                        "Error": "5",
+                        "Unit": "JK-1 mol-1"
+                    },
+                    {
+                        "Material": "ErF3",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "120",
+                        "Error": "5",
+                        "Unit": "JK-1 mol-1"
+                    }
+                ],
+                "timeStamp": 1699391394
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391399
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391404
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\59a70a3296dde6253f39d3538631cf5c.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391408
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391413
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391419
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391424
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\63d651f7b9d13c59de23ee4e4c96d51e.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391429
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391435
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391440
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391444
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\657439ed95bf546ff33369a4193facd3.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391450
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391455
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391460
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391465
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\669fa07b7ffef8c06b445b9f342974ff.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391470
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391475
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391478
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391483
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\674d9bbd2590bb7b2df343b06e9c7d94.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391488
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391493
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "magnetic entropy"
+                    }
+                ],
+                "timeStamp": 1699391500
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391505
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\6e3aa1c23186daa2495f5240dddf337b.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391510
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391514
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391519
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391524
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\74fcdcff041477c27880d929b1f50d0d.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "second law data extrapolation",
+                "data": [
+                    {
+                        "Material": "Tm,.,,Te",
+                        "Formula": "",
+                        "Entropy": 241.1,
+                        "Error": 8.5,
+                        "Unit": "J-K-1*mol-1"
+                    },
+                    {
+                        "Material": "Tm,.,,Te",
+                        "Formula": "",
+                        "Entropy": 238.0,
+                        "Error": "",
+                        "Unit": "J-K-1*mol-1"
+                    }
+                ],
+                "timeStamp": 1699391538
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "Tm,.,,Te",
+                        "Formula": "",
+                        "reaction": "(2)",
+                        "Entropy change": "241.1",
+                        "Error": "8.5",
+                        "Unit": "J-K-\u2018*mol-\u2019"
+                    },
+                    {
+                        "Material": "Tm,.,,Te",
+                        "Formula": "",
+                        "reaction": "(2)",
+                        "Entropy change": "238.0",
+                        "Error": "",
+                        "Unit": "J-K-\u2018*mol-\u2019"
+                    }
+                ],
+                "timeStamp": 1699391552
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "reaction entropy"
+                    },
+                    {
+                        "Type": "standard entropy"
+                    }
+                ],
+                "timeStamp": 1699391559
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391564
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\7bf511f3b3beefe2c9a49a8304bc6ae3.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391568
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391573
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391577
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391583
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\7c136f87100ff11d9efc7cfc31f31c29.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391588
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391594
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391599
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391604
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\828669a979ae65892b37e1fa99a94fcd.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391609
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391613
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391617
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391621
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\8378c8e60b94fb302d0eea416a6e488d.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391626
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "dynamic calorimetry",
+                "data": [
+                    {
+                        "Material": "0.712TeO2-0.237WO3-(0.040-x)La2O3-xEr2O3-0.011Bi2O3 glasses",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "",
+                        "Error": "",
+                        "Unit": ""
+                    }
+                ],
+                "timeStamp": 1699391634
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "standard entropy"
+                    }
+                ],
+                "timeStamp": 1699391640
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": [
+                    {
+                        "Measurement": "differential scanning calorimetry"
+                    },
+                    {
+                        "Measurement": "calculation from heat capacity"
+                    }
+                ],
+                "timeStamp": 1699391648
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\8486d74da06b9c1738e63da357fc16dc.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "LaFeO3",
+                        "Formula": "LaFeO3",
+                        "Entropy": "-27",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "PrFeO3",
+                        "Formula": "PrFeO3",
+                        "Entropy": "-30",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "NdFeO3",
+                        "Formula": "NdFeO3",
+                        "Entropy": "-29",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "SmFeO3",
+                        "Formula": "SmFeO3",
+                        "Entropy": "-30",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "EuFeO3",
+                        "Formula": "EuFeO3",
+                        "Entropy": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "GdFeO3",
+                        "Formula": "GdFeO3",
+                        "Entropy": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "TbFeO3",
+                        "Formula": "TbFeO3",
+                        "Entropy": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "DyFeO3",
+                        "Formula": "DyFeO3",
+                        "Entropy": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "HoFeO3",
+                        "Formula": "HoFeO3",
+                        "Entropy": "-32",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "ErFeO3",
+                        "Formula": "ErFeO3",
+                        "Entropy": "-32",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "TmFeO3",
+                        "Formula": "TmFeO3",
+                        "Entropy": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "YbFeO3",
+                        "Formula": "YbFeO3",
+                        "Entropy": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "LuFeO3",
+                        "Formula": "LuFeO3",
+                        "Entropy": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    }
+                ],
+                "timeStamp": 1699391686
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "LaFeO3",
+                        "Formula": "LaFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-27",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "PrFeO3",
+                        "Formula": "PrFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-30",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "NdFeO3",
+                        "Formula": "NdFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-29",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "SmFeO3",
+                        "Formula": "SmFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-30",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "EuFeO3",
+                        "Formula": "EuFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "GdFeO3",
+                        "Formula": "GdFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "TbFeO3",
+                        "Formula": "TbFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "DyFeO3",
+                        "Formula": "DyFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "HoFeO3",
+                        "Formula": "HoFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-32",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "ErFeO3",
+                        "Formula": "ErFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-32",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "TmFeO3",
+                        "Formula": "TmFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "YbFeO3",
+                        "Formula": "YbFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    },
+                    {
+                        "Material": "LuFeO3",
+                        "Formula": "LuFeO3",
+                        "reaction": "Fe + fLn203 + i02 = LnFe03",
+                        "Entropy change": "-31",
+                        "Error": "1.0",
+                        "Unit": "e.u."
+                    }
+                ],
+                "timeStamp": 1699391774
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391778
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391783
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\865c10bc81acdb2d877f03075a07fdc3.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391789
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391794
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391799
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391803
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\9188836dae2566ed17585fd131ad2131.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391809
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391813
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "vibrational entropy"
+                    },
+                    {
+                        "Type": "excess entropy"
+                    },
+                    {
+                        "Type": "total entropies of mixing"
+                    },
+                    {
+                        "Type": "entropy of solution"
+                    }
+                ],
+                "timeStamp": 1699391821
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391826
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\9af61566f4a0bba67358628fa7358e22.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391831
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391837
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391842
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": [
+                    {
+                        "Measurement": "numerical integration of C/T dT from heat capacity data"
+                    }
+                ],
+                "timeStamp": 1699391849
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\a2ccda3eebaa10b2dde0ce13bde99e8d.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391854
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391859
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391864
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391868
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\b4e0291a763dd77a2d7879730248d83f.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391873
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391877
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391881
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391887
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\b7fd33d2ed651dc3b4ef29ccabcab120.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "CeC2",
+                        "Formula": "CeC2",
+                        "Entropy": "96.3",
+                        "Error": "",
+                        "Unit": "J K-1 mol-1"
+                    },
+                    {
+                        "Material": "LaC2",
+                        "Formula": "LaC2",
+                        "Entropy": "88.3",
+                        "Error": "",
+                        "Unit": "J K-1 mol-1"
+                    },
+                    {
+                        "Material": "CaC2",
+                        "Formula": "CaC2",
+                        "Entropy": "96.7",
+                        "Error": "",
+                        "Unit": "J K-1 mol-1"
+                    },
+                    {
+                        "Material": "UC2",
+                        "Formula": "UC2",
+                        "Entropy": "93.4",
+                        "Error": "",
+                        "Unit": "J K-1 mol-1"
+                    }
+                ],
+                "timeStamp": 1699391909
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "CeC2",
+                        "Formula": "CeC2",
+                        "reaction": "",
+                        "Entropy change": "-15.7",
+                        "Error": "",
+                        "Unit": "J K^-1 mol^-1"
+                    }
+                ],
+                "timeStamp": 1699391918
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "standard entropy"
+                    }
+                ],
+                "timeStamp": 1699391924
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391929
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\bafa7517ca6efb3acb9c6a64ee35f83b.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391936
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391940
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391946
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391952
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\c03c632e54283ed9edaee23585b34614.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391958
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391964
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391968
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391973
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\c18a53bb1e7dc7b89c31268bd25c67c8.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391978
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699391983
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699391987
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699391993
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\c305ded04cec2c92e5002e8f3172b4a3.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699391997
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392002
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392009
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392013
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\ca26354a846730500f2fecb7e06d2f34.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392020
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392026
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392030
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392036
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\cccf9a2ff11ce9087914f692da49fb5d.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "additivity of entropy and third-law procedure",
+                "data": [
+                    {
+                        "Material": "Eu(II)",
+                        "Formula": "",
+                        "Entropy": 14.1,
+                        "Error": "",
+                        "Unit": "Cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Se2-",
+                        "Formula": "",
+                        "Entropy": 7.0,
+                        "Error": "",
+                        "Unit": "Cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Eu(II)",
+                        "Formula": "",
+                        "Entropy": 4.2,
+                        "Error": "",
+                        "Unit": "Cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "EuSe",
+                        "Formula": "EuSe",
+                        "Entropy": 25.3,
+                        "Error": 0.5,
+                        "Unit": "Cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "EuSe",
+                        "Formula": "EuSe",
+                        "Entropy": 62.9,
+                        "Error": 0.6,
+                        "Unit": "cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "EuSe",
+                        "Formula": "EuSe",
+                        "Entropy": -4.5,
+                        "Error": 10.7,
+                        "Unit": "Gal, K-1 mol-1"
+                    }
+                ],
+                "timeStamp": 1699392070
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "thermodynamic measurements",
+                "data": [
+                    {
+                        "Material": "EuSe(s)",
+                        "Formula": "EuSe",
+                        "reaction": "sublimation",
+                        "Entropy change": "62.9",
+                        "Error": "0.6",
+                        "Unit": "cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "EuSe(s)",
+                        "Formula": "EuSe",
+                        "reaction": "formation",
+                        "Entropy change": "-4.5",
+                        "Error": "10.7",
+                        "Unit": "cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Eu(II)",
+                        "Formula": "Eu",
+                        "reaction": "",
+                        "Entropy change": "14.1",
+                        "Error": "",
+                        "Unit": "cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Se2-",
+                        "Formula": "Se2-",
+                        "reaction": "",
+                        "Entropy change": "7.0",
+                        "Error": "",
+                        "Unit": "cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Eu(II)",
+                        "Formula": "Eu",
+                        "reaction": "magnetic contribution",
+                        "Entropy change": "4.2",
+                        "Error": "",
+                        "Unit": "cal, K-1 mol-1"
+                    },
+                    {
+                        "Material": "",
+                        "Formula": "",
+                        "reaction": "",
+                        "Entropy change": "25.3",
+                        "Error": "0.5",
+                        "Unit": "cal, K-1 mol-1"
+                    }
+                ],
+                "timeStamp": 1699392107
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "standard entropy"
+                    },
+                    {
+                        "Type": "magnetic entropy"
+                    }
+                ],
+                "timeStamp": 1699392114
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392243
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\cfed9332eecb7c9c3101b9055dbea1b9.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392249
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392254
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392258
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392263
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\d531fdccf4129b8fd852d2dd4593fa26.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "Yb2+",
+                        "Formula": "Yb2+(aq)",
+                        "Entropy": -47,
+                        "Error": 5,
+                        "Unit": "J.K-1.mol-1"
+                    },
+                    {
+                        "Material": "Yb3+",
+                        "Formula": "Yb3+(aq)",
+                        "Entropy": -238,
+                        "Error": 3,
+                        "Unit": "J.K-1.mol-1"
+                    },
+                    {
+                        "Material": "H2",
+                        "Formula": "H2(g)",
+                        "Entropy": 130.57,
+                        "Error": 0.03,
+                        "Unit": "J.K-1.mol-1"
+                    }
+                ],
+                "timeStamp": 1699392280
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392287
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": [
+                    {
+                        "Type": "standard entropy"
+                    }
+                ],
+                "timeStamp": 1699392293
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392298
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\d5b54e63e4f48179eb1bc05b80677844.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392303
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392308
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392313
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392318
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\d88538d5ed517be30e9b900b39dda7ea.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392322
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392326
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392331
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392335
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\d8ad5e049607296419dc3b353c045a82.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392340
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392345
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392351
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392356
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\ed350a9eb78f6cd5263513ed8ca53009.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392360
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392366
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392371
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392376
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\f13d07deedfc8594fe3f6a216f461e06.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392381
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392385
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392513
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392521
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\f36f938911f798b9c0a92fd5a4fbbbef.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "Samarium",
+                        "Formula": "Sm",
+                        "Entropy": "16.61",
+                        "Error": "",
+                        "Unit": "cal,, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Fluorine",
+                        "Formula": "F2",
+                        "Entropy": "48.5",
+                        "Error": "",
+                        "Unit": "cal,, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Samarium trifluoride",
+                        "Formula": "SmF3",
+                        "Entropy": "27.75",
+                        "Error": "",
+                        "Unit": "cal,, K-1 mol-1"
+                    }
+                ],
+                "timeStamp": 1699392530
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "measurement method": "",
+                "data": [
+                    {
+                        "Material": "Samarium",
+                        "Formula": "Sm",
+                        "reaction": "",
+                        "Entropy change": "16.61",
+                        "Error": "",
+                        "Unit": "cal,, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Fluorine",
+                        "Formula": "F2",
+                        "reaction": "",
+                        "Entropy change": "48.5",
+                        "Error": "",
+                        "Unit": "cal,, K-1 mol-1"
+                    },
+                    {
+                        "Material": "Samarium trifluoride",
+                        "Formula": "SmF3",
+                        "reaction": "",
+                        "Entropy change": "27.75",
+                        "Error": "",
+                        "Unit": "cal,, K-1 mol-1"
+                    }
+                ],
+                "timeStamp": 1699392556
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392560
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392565
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\f64e9e8b9b6d9715c82b34e37d2c9785.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392572
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392576
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392580
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392585
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\f88a553e384f15e94f3e5b4b7a389a9c.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392590
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392595
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392600
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392605
+            }
+        ]
+    },
+    {
+        "paperFileName": "./papers\\fe5acf95fbb635d01a8603ca0b537e28.pdf",
+        "extractData": [
+            {
+                "dataType": "entropy",
+                "dataType2": "general entropy",
+                "data": null,
+                "timeStamp": 1699392610
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy change",
+                "data": null,
+                "timeStamp": 1699392614
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropyType",
+                "data": null,
+                "timeStamp": 1699392619
+            },
+            {
+                "dataType": "entropy",
+                "dataType2": "entropy measurement",
+                "data": null,
+                "timeStamp": 1699392624
+            }
+        ]
     }
 ]

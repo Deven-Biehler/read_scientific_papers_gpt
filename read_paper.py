@@ -3,8 +3,9 @@ Author: Utpal Kumar, BSL, UCB
 Date: 2023-04-27
 Email: utpalkumar@berkeley.edu
 '''
-from PyPDF2 import PdfReader
+
 import pickle
+from PyPDF2 import PdfReader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS
@@ -46,8 +47,8 @@ def main():
     queryList = []
     for query in questionClass.entropyQuestion():
         queryList.append(query)
-    for query in questionClass.freeEnergyQuestion():
-        queryList.append(query)
+    # for query in questionClass.freeEnergyQuestion():
+    #     queryList.append(query)
 
 
     folder_path = config["folder_path"]
@@ -61,7 +62,10 @@ def main():
         file_extension = os.path.join(folder_path, "*.pdf")
         papers = glob.glob(file_extension)
     for paperFile in papers:
-        outdoc = "output.json"
+        if config["llm"] == "gpt-4":
+            outdoc = "output_gpt_4.json"
+        elif config["llm"] == "gpt-3.5-turbo":
+            outdoc = "output_gpt_3.json"
         try:
             with open(outdoc, "r") as json_file:
                 json_data = json.load(json_file)
