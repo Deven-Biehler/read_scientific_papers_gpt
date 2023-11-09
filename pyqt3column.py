@@ -79,7 +79,7 @@ class ThreeColumnApp(QWidget):
                 
                 # Add data found to the subcategory
                 for datapoint in data:
-                    self.file_data[main_data_group][sub_data_group].append(datapoint)
+                    self.file_data[main_data_group][sub_data_group].append(str(datapoint))
 
     def on_file_click(self, item):
         item_text = item.text()
@@ -119,12 +119,8 @@ class ThreeColumnApp(QWidget):
             subcategory_item = QTreeWidgetItem(data_widget, [subcategory])
 
             if data_list:
-                for data in data_list:
-                    if data != None:
-                        for data_value in list(data.values()):
-                            data_item = QTreeWidgetItem(subcategory_item, [data_value])
-                    else:
-                        data_item = QTreeWidgetItem(subcategory_item, ["None"])
+                for datapoint in data_list:
+                    data_item = QTreeWidgetItem(subcategory_item, [str(datapoint)])
 
         return data_widget
     
