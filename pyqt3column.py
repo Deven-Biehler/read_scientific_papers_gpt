@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QFrame, QListWidget, QListWidgetItem, QTreeWidget, QTreeWidgetItem
+from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QFrame, QListWidget, QListWidgetItem, QTreeWidget, QTreeWidgetItem, QPushButton, QFileDialog
 
 import json
 
@@ -10,9 +10,6 @@ class ThreeColumnApp(QWidget):
         super().__init__()
         self.layout = QGridLayout()
         self.file_data = {}
-        self.input_file_name = "output_gpt_4.json"
-        with open(self.input_file_name, 'r') as file:
-            self.data = json.load(file)
 
         self.initUI()
 
@@ -22,7 +19,7 @@ class ThreeColumnApp(QWidget):
         self.setGeometry(100, 100, 1200, 400)
 
         # Initialize widgets for each column
-        self.file_widget = self.get_file_widget(self.input_file_name, 'paperFileName')
+        self.file_widget = QListWidget()
         self.category_widget = QListWidget()
         self.data_widget = QListWidget()
         self.file_widget.itemClicked.connect(self.on_file_click)
@@ -45,8 +42,26 @@ class ThreeColumnApp(QWidget):
         self.layout.addWidget(line1, 0, 1)
         self.layout.addWidget(line2, 0, 3)
 
+        # Add a button
+        button = QPushButton('Load File')
+        button.clicked.connect(self.on_button_click)
+        self.layout.addWidget(button, 1, 0, 1, 5)  # Add the button to the second row, spanning all columns
+
 
         self.setLayout(self.layout)
+
+    def on_button_click(self):
+        options = QFileDialog.Options()
+        options |= QFileDialog.ReadOnly
+        file_name, _ = QFileDialog.getOpenFileName(self, "Open JSON File", "", "JSON Files (*.json);;All Files (*)", options=options)
+        if file_name:
+            self.input_file_name = file_name
+            with open(self.input_file_name, 'r') as file:
+                self.data = json.load(file)
+            # Refresh the file widget with the new file data
+            self.file_widget = self.get_file_widget(self.input_file_name, 'paperFileName')
+            self.layout.addWidget(self.file_widget, 0, 0)
+            self.file_widget.itemClicked.connect(self.on_file_click)
 
     def get_file_data(self, index):
         # Initialize the files category data dictionary
