@@ -1,5 +1,6 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QFrame, QListWidget, QListWidgetItem, QTreeWidget, QTreeWidgetItem, QPushButton, QFileDialog
+from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QFrame, QListWidget, QListWidgetItem, QTreeWidget, QTreeWidgetItem, QPushButton, QFileDialog, QTextEdit, QVBoxLayout
+from PyQt5.QtCore import Qt
 
 import json
 
@@ -127,17 +128,29 @@ class ThreeColumnApp(QWidget):
         return categories
 
     def get_data_widget(self, category_data):
-        data_widget = QTreeWidget()
-        data_widget.setHeaderLabels(["Subcategory"])
+        data_widget = QTextEdit()
+        data_widget.setAcceptRichText(True)
+        data_widget.setPlaceholderText("Edit your data here...")
+
+        data_widget.setReadOnly(False)
 
         for subcategory, data_list in category_data.items():
-            subcategory_item = QTreeWidgetItem(data_widget, [subcategory])
+            data_widget.append(f"{subcategory}")
 
             if data_list:
                 for datapoint in data_list:
-                    data_item = QTreeWidgetItem(subcategory_item, [str(datapoint)])
+                    for key, value in eval(datapoint).items():
+                        data_widget.append(f" {key}: {value}")
+
+            data_widget.append("")
+
+        data_widget.textChanged.connect(self.on_data_widget_changed)
 
         return data_widget
+
+    def on_data_widget_changed(self):
+        new_text = self.data_widget.toPlainText()
+        print(f"Data widget content changed to: {new_text}")
     
     def update_category_column(self, column_widget):
         # update data column
