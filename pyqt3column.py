@@ -128,6 +128,7 @@ class ThreeColumnApp(QWidget):
     def on_category_click(self, item):
         '''Function gets the data from the selected category and stores it in a dictionary.'''
         data_widget = self.get_data_widget(self.file_data[item.text()])
+        self.selected_category = item.text()
         self.update_data_column(data_widget)
 
     def get_file_widget(self, filename, key):
@@ -174,6 +175,7 @@ class ThreeColumnApp(QWidget):
 
     def on_data_widget_changed(self):
         '''Not implemented yet.'''
+        self.parse_data()
 
         # new_text = self.data_widget.toPlainText()
         # print(f"Data widget content changed to: {new_text}")
@@ -201,24 +203,39 @@ class ThreeColumnApp(QWidget):
         self.data_widget = data_widget
         self.layout.addWidget(self.data_widget, 0, 4)
 
-    def parse_data(self, data_widget):
+    def parse_data(self):
         '''Function parses the data from the data widget and stores it in a dictionary.'''
-        lines = data_widget.split("\n")
+        data_text = self.data_widget.toPlainText()
+        lines = data_text.split("\n")
         parsed_data = []
-        current_entry = {}
+        current_data_entry = {}
+        current_entry = {"dataType": self.selected_category}
         for line in lines:
             if line == "":
-                # If new line found, append the current entry and initialize new entry.
-                if current_entry != {"dataType": self.selected_category}:
-                    parsed_data.append(current_entry)
-                    current_entry = {"dataType": self.selected_category}
+                # If new line found and current_data_entry is not empty,
+                # append it to the current_entry
+                if current_data_entry != {}:
+                    current_entry["data"].append(current_data_entry)
+                    current_data_entry = {}
             elif line[0] != " ":
-                # If new sub category found, add to dictionary
+                # If new sub category found, append old one and reset current_entry
+                if current_entry != {"dataType": self.selected_category}:
+                    # Append current entry to parsed data
+                    parsed_data.append(current_entry)
+                    # Reset current_entry
+                    current_entry = {"dataType": self.selected_category}
                 current_entry["dataType2"] = [line]
+                current_entry["data"] = []
             elif line[0] == " ":
+                # if new data is found, add it to the current_entry_data
                 key, value = line.split(":")
-                current_entry["data"][key] = value
-        print()
+                key, value = key.strip(), value.strip()
+                current_data_entry[key] = value
+        # Append last entry
+        if current_entry != {"dataType": self.selected_category}:
+            parsed_data.append(current_entry)
+            current_entry = {"dataType": self.selected_category}
+        print(parsed_data)
 
     # Removes the data to be replaced by updated data.
     def remove_old_data(self):
