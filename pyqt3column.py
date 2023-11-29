@@ -11,6 +11,8 @@ class ThreeColumnApp(QWidget):
         super().__init__()
         self.layout = QGridLayout()
         self.file_data = {}
+        self.selected_file = 0
+        self.selected_category = ""
 
         self.initUI()
 
@@ -67,6 +69,7 @@ class ThreeColumnApp(QWidget):
     def get_file_data(self, index):
         # Initialize the files category data dictionary
         self.file_data = {}
+        self.selected_file = index
 
         # for each query in the file data
         for query_data in self.data[index]["extractData"]:
@@ -141,7 +144,7 @@ class ThreeColumnApp(QWidget):
                 for datapoint in data_list:
                     for key, value in eval(datapoint).items():
                         data_widget.append(f" {key}: {value}")
-
+                    data_widget.append("")
             data_widget.append("")
 
         data_widget.textChanged.connect(self.on_data_widget_changed)
@@ -172,6 +175,33 @@ class ThreeColumnApp(QWidget):
         # Add new data widget
         self.data_widget = data_widget
         self.layout.addWidget(self.data_widget, 0, 4)
+    
+    def parse_data(self, data_widget):
+        lines = data_widget.split("\n")
+        parsed_data = []
+        current_entry = {}
+        current_key = ""
+        for line in lines:
+            if line == "":
+                # If new line found, append the current entry and initialize new entry.
+                if current_entry != {"dataType": self.selected_category}:
+                    parsed_data.append(current_entry)
+                    current_entry = {"dataType": self.selected_category}
+            elif line[0] != " ":
+                # If new sub category found, add to dictionary
+                current_entry["dataType2"] = [line]
+            elif line[0] == " ":
+                key, value = line.split(":")
+                current_entry["data"][key] = value
+        print()
+
+    # Removes the data to be replaced by updated data.
+    def remove_old_data(self):
+        for datapoint in self.data[self.selected_file]["extractData"]:
+            if datapoint["dataType"] == self.selected_category:
+                self.data[self.selected_file]["extractData"].remove(datapoint)
+                
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
