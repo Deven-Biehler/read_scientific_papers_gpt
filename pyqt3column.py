@@ -1,22 +1,32 @@
 import sys
+import json
 from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QFrame, QListWidget, QListWidgetItem, QTreeWidget, QTreeWidgetItem, QPushButton, QFileDialog, QTextEdit, QVBoxLayout
 from PyQt5.QtCore import Qt
 
-import json
 
 class ThreeColumnApp(QWidget):
+    '''
+    Class creates a three column application with a 
+    file column, category column, and data column.
+    '''
     layout = None
 
     def __init__(self):
         super().__init__()
         self.layout = QGridLayout()
+        self.file_widget = QListWidget()
+        self.category_widget = QListWidget()
+        self.data_widget = QListWidget()
         self.file_data = {}
+        self.data = {}
         self.selected_file = 0
         self.selected_category = ""
+        self.input_file_name = ""
 
-        self.initUI()
+        self.init_ui()
 
-    def initUI(self):
+    def init_ui(self):
+        """Function initializes user interface."""
         # Initialize Window
         self.setWindowTitle('Three Column Application')
         self.setGeometry(100, 100, 1200, 400)
@@ -48,18 +58,23 @@ class ThreeColumnApp(QWidget):
         # Add a button
         button = QPushButton('Load File')
         button.clicked.connect(self.on_button_click)
-        self.layout.addWidget(button, 1, 0, 1, 5)  # Add the button to the second row, spanning all columns
+
+        # Add the button to the second row, spanning all columns
+        self.layout.addWidget(button, 1, 0, 1, 5)
 
 
         self.setLayout(self.layout)
 
     def on_button_click(self):
+        '''Function opens a file dialog to select a JSON file.'''
         options = QFileDialog.Options()
         options |= QFileDialog.ReadOnly
-        file_name, _ = QFileDialog.getOpenFileName(self, "Open JSON File", "", "JSON Files (*.json);;All Files (*)", options=options)
+        file_name, _ = QFileDialog.getOpenFileName(
+            self, "Open JSON File", "", "JSON Files (*.json);;All Files (*)", options=options
+            )
         if file_name:
             self.input_file_name = file_name
-            with open(self.input_file_name, 'r') as file:
+            with open(self.input_file_name, 'r', encoding='utf-8') as file:
                 self.data = json.load(file)
             # Refresh the file widget with the new file data
             self.file_widget = self.get_file_widget(self.input_file_name, 'paperFileName')
@@ -67,6 +82,7 @@ class ThreeColumnApp(QWidget):
             self.file_widget.itemClicked.connect(self.on_file_click)
 
     def get_file_data(self, index):
+        '''Function gets the data from the selected file and stores it in a dictionary.'''
         # Initialize the files category data dictionary
         self.file_data = {}
         self.selected_file = index
@@ -86,21 +102,22 @@ class ThreeColumnApp(QWidget):
             data = query_data["data"]
 
             # If chatGPT did not fail to get data
-            if data != None:
+            if data is not None:
                 # if the main category is already in the file dictionary
-                if main_data_group not in self.file_data.keys():
-                    # if it is not already in the category dictionary, then initialize it with its sub category
+                if main_data_group not in self.file_data:
+                    # if not already in the category dictionary -> initialize it with sub category
                     self.file_data[main_data_group] = {}
 
                 # if the main category does not have the subcategory in its dictionary, add it
                 if sub_data_group not in self.file_data[main_data_group].keys():
                     self.file_data[main_data_group][sub_data_group] = []
-                
+
                 # Add data found to the subcategory
                 for datapoint in data:
                     self.file_data[main_data_group][sub_data_group].append(str(datapoint))
 
     def on_file_click(self, item):
+        '''Function gets the data from the selected file and stores it in a dictionary.'''
         item_text = item.text()
         print(f'Item Clicked: {item_text}')
 
@@ -109,20 +126,23 @@ class ThreeColumnApp(QWidget):
         self.update_category_column(category_widget)
 
     def on_category_click(self, item):
+        '''Function gets the data from the selected category and stores it in a dictionary.'''
         data_widget = self.get_data_widget(self.file_data[item.text()])
         self.update_data_column(data_widget)
 
     def get_file_widget(self, filename, key):
-        with open(filename, 'r') as file:
+        '''Function gets the file names from the input file and stores it in a QListWidget.'''
+        with open(filename, 'r', encoding='utf-8') as file:
             data = json.load(file)
 
         file_names = QListWidget()
-        for i, dict in enumerate(data):
-            file_names.addItem(str(i) + ": " + dict[key])
+        for i, data_dict in enumerate(data):
+            file_names.addItem(str(i) + ": " + data_dict[key])
 
         return file_names
 
     def get_category_widget(self, file_data):
+        '''Function gets the categories from the input file and stores it in a QListWidget.'''
 
         categories = QListWidget()
         for main_category in file_data.keys():
@@ -131,6 +151,7 @@ class ThreeColumnApp(QWidget):
         return categories
 
     def get_data_widget(self, category_data):
+        '''Function gets the data from the input file and stores it in a QListWidget.'''
         data_widget = QTextEdit()
         data_widget.setAcceptRichText(True)
         data_widget.setPlaceholderText("Edit your data here...")
@@ -152,13 +173,16 @@ class ThreeColumnApp(QWidget):
         return data_widget
 
     def on_data_widget_changed(self):
-        new_text = self.data_widget.toPlainText()
-        print(f"Data widget content changed to: {new_text}")
-    
+        '''Not implemented yet.'''
+
+        # new_text = self.data_widget.toPlainText()
+        # print(f"Data widget content changed to: {new_text}")
+
     def update_category_column(self, column_widget):
+        '''Function updates the category column with the new category widget.'''
         # update data column
         self.update_data_column(QListWidget())
-        
+
         # Remove old category widget
         self.layout.removeWidget(self.category_widget)
         self.category_widget.deleteLater()
@@ -166,8 +190,9 @@ class ThreeColumnApp(QWidget):
         self.category_widget = column_widget
         self.layout.addWidget(self.category_widget, 0, 2)
         self.category_widget.itemClicked.connect(self.on_category_click)
-    
+
     def update_data_column(self, data_widget):
+        '''Function updates the data column with the new data widget.'''
         # Remove old data widget
         self.layout.removeWidget(self.data_widget)
         self.data_widget.deleteLater()
@@ -175,12 +200,12 @@ class ThreeColumnApp(QWidget):
         # Add new data widget
         self.data_widget = data_widget
         self.layout.addWidget(self.data_widget, 0, 4)
-    
+
     def parse_data(self, data_widget):
+        '''Function parses the data from the data widget and stores it in a dictionary.'''
         lines = data_widget.split("\n")
         parsed_data = []
         current_entry = {}
-        current_key = ""
         for line in lines:
             if line == "":
                 # If new line found, append the current entry and initialize new entry.
@@ -197,10 +222,11 @@ class ThreeColumnApp(QWidget):
 
     # Removes the data to be replaced by updated data.
     def remove_old_data(self):
+        '''Function removes the old data from the file data.'''
         for datapoint in self.data[self.selected_file]["extractData"]:
             if datapoint["dataType"] == self.selected_category:
                 self.data[self.selected_file]["extractData"].remove(datapoint)
-                
+
 
 
 if __name__ == '__main__':
