@@ -155,7 +155,6 @@ class ThreeColumnApp(QWidget):
         '''Function gets the data from the input file and stores it in a QListWidget.'''
         data_widget = QTextEdit()
         data_widget.setAcceptRichText(True)
-        data_widget.setPlaceholderText("Edit your data here...")
 
         data_widget.setReadOnly(False)
 
@@ -224,18 +223,21 @@ class ThreeColumnApp(QWidget):
                     parsed_data.append(current_entry)
                     # Reset current_entry
                     current_entry = {"dataType": self.selected_category}
-                current_entry["dataType2"] = [line]
+                current_entry["dataType2"] = line
                 current_entry["data"] = []
             elif line[0] == " ":
                 # if new data is found, add it to the current_entry_data
-                key, value = line.split(":")
+                parsed_line = line.split(":")
+                key = parsed_line[0]
+                value = ":".join(parsed_line[1:])
                 key, value = key.strip(), value.strip()
                 current_data_entry[key] = value
         # Append last entry
         if current_entry != {"dataType": self.selected_category}:
+            if current_data_entry != {}:
+                current_entry["data"].append(current_data_entry)
             parsed_data.append(current_entry)
-            current_entry = {"dataType": self.selected_category}
-        print(parsed_data)
+        print(json.dumps(parsed_data, indent=4))
 
     # Removes the data to be replaced by updated data.
     def remove_old_data(self):
