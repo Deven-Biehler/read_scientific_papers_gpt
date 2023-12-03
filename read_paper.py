@@ -6,6 +6,8 @@ Email: utpalkumar@berkeley.edu
 
 import pickle
 from PyPDF2 import PdfReader
+from pdfminer.pdfparser import PDFParser
+from pdfminer.pdfdocument import PDFDocument
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS
@@ -74,15 +76,19 @@ def main():
             json_data = []
         paperData = {}
         file_path_no_extension = os.path.splitext(paperFile)[0]
-        if file_path_no_extension + ".pdf" not in json_data:
-            if not os.path.exists(paperFile):
+        if not os.path.exists(paperFile):
                 sys.exit("Error: Paper file does not exist")
+        paperreader = PaperReader(config, paperFile)
+
+
+        # Check if the paper exists in the json file
+        if not (paperreader.paper_exists(json_data, file_path_no_extension + ".pdf")):
+            # Query the document and append data to json_data
+            
             paperData["paperFileName"] = file_path_no_extension + ".pdf"
             result_list = []
             for query in queryList:
                 time.sleep(2)
-
-                paperreader = PaperReader(config, paperFile)
                 # docsearch, chain = create_model(paperFile)
 
                 ## Query the document
@@ -94,7 +100,16 @@ def main():
                 except:
                     outDict = {'answerStr': out, 'question': query}
 
+                # Add timestamp
                 outDict['timeStamp'] = round(time.time())
+                
+                # Add metadata
+                fp = open(file_path_no_extension + ".pdf", 'rb')
+                parser = PDFParser(fp)
+                doc = PDFDocument(parser)
+                #outDict['MetaData'] = doc.info[0] # Meta data not working, need to fix
+
+                print(doc.info)  # The "Info" metadata
 
                 result_list.append(outDict)
                 print("="*100)
@@ -103,12 +118,10 @@ def main():
             paperData["extractData"] = result_list
             json_data.append(paperData)
             if config['document_output']:
-
-                # print(outdoc)
                 if config['clear_cache']:
                     if os.path.exists(outdoc):
                         os.remove(outdoc)
-                with open(outdoc, "w") as json_file:
+                with open(outdoc, "w", encoding="utf-8") as json_file:
                     json.dump(json_data, json_file, indent=4)
                 
             
@@ -153,6 +166,13 @@ class PaperReader:
 
         self.pdfdatafile1 = os.path.join(self.databasedir, yamldata[self.paperFile]['pdfdatafile'])
         self.chaindatafile1 = os.path.join(self.databasedir, yamldata[self.paperFile]['chaindatafile'])
+
+    def paper_exists(self, data, file_name):
+        for paper in data:
+            if paper["paperFileName"] == file_name:
+                return True
+        return False
+
 
     def _create_model(self):
         '''

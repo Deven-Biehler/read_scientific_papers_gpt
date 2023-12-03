@@ -3,46 +3,6 @@
         "paperFileName": "./papers\\00dd1de0ca18ef63ffcaf14916c69d84.pdf",
         "extractData": [
             {
-                "dataType": "general",
-                "dataType2": "title",
-                "data": [
-                    {
-                        "title": "The Standard Free Energy of Formation of YbFez04, Yb,Fe,O,, YbFeO,, and Yb,Fe,O,, at 1200\u00b0C"
-                    }
-                ],
-                "timeStamp": 1696958751
-            },
-            {
-                "dataType": "general",
-                "dataType2": "title",
-                "data": [
-                    {
-                        "title": "The Standard Free Energy of Formation of YbFez04, Yb,Fe,O,, YbFeO,, and Yb,Fe,O,, at 1200\u00b0C"
-                    }
-                ],
-                "timeStamp": 1696958761
-            },
-            {
-                "dataType": "general",
-                "dataType2": "doi",
-                "data": [
-                    {
-                        "doi": null
-                    }
-                ],
-                "timeStamp": 1696958767
-            },
-            {
-                "dataType": "general",
-                "dataType2": "doi",
-                "data": [
-                    {
-                        "doi": null
-                    }
-                ],
-                "timeStamp": 1696958771
-            },
-            {
                 "dataType": "doi",
                 "data": [
                     {
