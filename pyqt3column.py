@@ -80,7 +80,7 @@ class ThreeColumnApp(QWidget):
         for datapoint in parsed_data:
             datapoint["Human Checked"] = True
         # Save New Data to database
-        self.update_data(parsed_data)
+        self.update_data()
 
     def on_load_button_click(self):
         '''Function opens a file dialog to select a JSON file.'''
@@ -101,45 +101,9 @@ class ThreeColumnApp(QWidget):
     def get_file_data(self, index):
         '''Function gets the data from the selected file and stores it in a dictionary.'''
         # Initialize the files category data dictionary
-        self.file_data = {}
         self.selected_file = index
 
-        time_stamp_dict = {}
-
-        # for each query in the file data
-        for query_data in self.data[index]["extractData"]:
-            # Get the main category
-            main_data_group = query_data["dataType"]
-            # Get the time stamp
-            time_stamp = query_data["timeStamp"]
-            # If a sub category exists
-            if "dataType2" in query_data.keys():
-                # Get sub category
-                sub_data_group = query_data["dataType2"]
-            else:
-                # If no sub category exists, tag as null
-                sub_data_group = "null"
-            # Get the actual data from the category
-            data = query_data["data"]
-
-            # If chatGPT did not fail to get data
-            if data is not None:
-                # if the main category is already in the file dictionary
-                if main_data_group not in self.file_data:
-                    # if not already in the category dictionary -> initialize it with sub category
-                    self.file_data[main_data_group] = {}
-                    time_stamp_dict[main_data_group] = {}
-
-                # if the main category does not have the subcategory in its dictionary, add it
-                if sub_data_group not in self.file_data[main_data_group].keys():
-                    self.file_data[main_data_group][sub_data_group] = []
-                    time_stamp_dict[main_data_group][sub_data_group] = []
-
-                # Add data found to the subcategory
-                for datapoint in data:
-                    self.file_data[main_data_group][sub_data_group].append(str(datapoint))
-                    time_stamp_dict[main_data_group][sub_data_group].append(time_stamp)
-
+        self.file_data = self.data[index]["extractData"]
 
 
     def on_file_click(self, item):
@@ -153,7 +117,8 @@ class ThreeColumnApp(QWidget):
 
     def on_category_click(self, item):
         '''Function gets the data from the selected category and stores it in a dictionary.'''
-        data_widget = self.get_data_widget(self.file_data[item.text()])
+        self.selected_category = item.text()
+        data_widget = self.get_data_widget()
         self.selected_category = item.text()
         self.update_data_column(data_widget)
 
@@ -172,28 +137,45 @@ class ThreeColumnApp(QWidget):
         '''Function gets the categories from the input file and stores it in a QListWidget.'''
 
         categories = QListWidget()
-        for main_category in file_data.keys():
+        main_categories = []
+        for datapoint in file_data:
+            main_categories.append(datapoint["dataType"])
+        for main_category in set(main_categories):
             item = QListWidgetItem(main_category)
             item.setCheckState(Qt.Unchecked)
             categories.addItem(item)
 
         return categories
 
-    def get_data_widget(self, category_data):
+    def get_data_widget(self):
         '''Function gets the data from the input file and stores it in a QListWidget.'''
         data_widget = QTextEdit()
         data_widget.setAcceptRichText(True)
 
         data_widget.setReadOnly(False)
 
-        for subcategory, data_list in category_data.items():
-            data_widget.append(f"{subcategory}")
+        data_list = []
+        for datapoint in self.file_data:
+            if datapoint["dataType"] == self.selected_category:
+                data_list.append(datapoint)
 
-            if data_list:
-                for datapoint in data_list:
-                    for key, value in eval(datapoint).items():
-                        data_widget.append(f"    {key}: {value}")
-                    data_widget.append("")
+        for datapoint in data_list:
+            if "dataType2" in datapoint:
+                data_widget.append(f"{datapoint['dataType2']}: {datapoint['timeStamp']}")
+            else:
+                data_widget.append(f"{datapoint['dataType']}: {datapoint['timeStamp']}")
+            if datapoint["data"]:
+                for data in datapoint["data"]:
+                    if data:
+                        for key, value in data.items():
+                            data_widget.append(f"    {key}: {value}")
+                        data_widget.append("")
+                    else:
+                        data_widget.append("    None")
+                        data_widget.append("")
+            else:
+                data_widget.append("    None")
+                data_widget.append("")
             data_widget.append("")
 
         return data_widget
@@ -239,36 +221,49 @@ class ThreeColumnApp(QWidget):
                 # If new sub category found, append old one and reset current_entry
                 if current_entry != {"dataType": self.selected_category}:
                     # Append current entry to parsed data
-                    parsed_data.append(current_entry)
+                    if parsed_data is not None:
+                        parsed_data.append(current_entry)
                     # Reset current_entry
                     current_entry = {"dataType": self.selected_category}
-                current_entry["dataType2"] = line
+                sub_category, time_stamp = line.split(":")
+                current_entry["dataType2"], current_entry["timeStamp"] = sub_category.strip(), time_stamp.strip()
                 current_entry["data"] = []
             elif line[0] == " ":
                 # if new data is found, add it to the current_entry_data
-                parsed_line = line.split(":")
-                key = parsed_line[0]
-                value = ":".join(parsed_line[1:])
-                key, value = key.strip(), value.strip()
-                current_data_entry[key] = value
+                if line.strip() == "None":
+                    current_entry["data"] = None
+                else:
+                    parsed_line = line.split(":")
+                    key = parsed_line[0]
+                    value = ":".join(parsed_line[1:])
+                    key, value = key.strip(), value.strip()
+                    current_data_entry[key] = value
         # Append last entry
         if current_entry != {"dataType": self.selected_category}:
             if current_data_entry != {}:
                 current_entry["data"].append(current_data_entry)
-            parsed_data.append(current_entry)
+            if parsed_data is not None:
+                parsed_data.append(current_entry)
         print(json.dumps(parsed_data, indent=4))
         return parsed_data
 
     # Removes the data to be replaced by updated data.
     def remove_old_data(self):
         '''Function removes the old data from the file data.'''
-        for datapoint in self.data[self.selected_file]["extractData"]:
+        datapoints_to_remove = []
+        for datapoint in (self.file_data):
             if datapoint["dataType"] == self.selected_category:
-                self.data[self.selected_file]["extractData"].remove(datapoint)
-    
-    def update_data(self, data):
+                datapoints_to_remove.append(datapoint)
+        for datapoint in datapoints_to_remove:
+            self.file_data.remove(datapoint)
+
+    def update_data(self):
         '''Function updates the data in the file data.'''
-        self.data[self.selected_file]["extractData"] # TODO: Finish this function
+        parsed_data = self.parse_data()
+        self.remove_old_data()
+        self.file_data += parsed_data
+        self.data[self.selected_file]["extractData"] = self.file_data
+            
 
 
 
