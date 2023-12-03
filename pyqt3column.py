@@ -42,8 +42,6 @@ class ThreeColumnApp(QWidget):
         self.layout.addWidget(self.category_widget, 0, 2)
         self.layout.addWidget(self.data_widget, 0, 4)
 
-
-
         # Line creation:
         # Create vertical lines to separate the columns
         line1 = QFrame()
@@ -57,15 +55,34 @@ class ThreeColumnApp(QWidget):
 
         # Add a button
         button = QPushButton('Load File')
-        button.clicked.connect(self.on_button_click)
+        button.clicked.connect(self.on_load_button_click)
 
         # Add the button to the second row, spanning all columns
         self.layout.addWidget(button, 1, 0, 1, 5)
 
+        # Add Save button
+        new_button = QPushButton('Save')
+        # Connect the button to a function
+        new_button.clicked.connect(self.on_save_button_click)
+        # Add the button to the layout under the data widget
+        self.layout.addWidget(new_button, 1, 4, 1, 1)
+
 
         self.setLayout(self.layout)
 
-    def on_button_click(self):
+    def on_save_button_click(self):
+        '''Function to handle load button click.'''
+        parsed_data = self.parse_data()
+        current_item = self.category_widget.currentItem()
+        if current_item is not None:
+            current_item.setCheckState(Qt.Checked)
+        # Label the data as human checked
+        for datapoint in parsed_data:
+            datapoint["Human Checked"] = True
+        # Save New Data to database
+        self.update_data(parsed_data)
+
+    def on_load_button_click(self):
         '''Function opens a file dialog to select a JSON file.'''
         options = QFileDialog.Options()
         options |= QFileDialog.ReadOnly
@@ -87,10 +104,14 @@ class ThreeColumnApp(QWidget):
         self.file_data = {}
         self.selected_file = index
 
+        time_stamp_dict = {}
+
         # for each query in the file data
         for query_data in self.data[index]["extractData"]:
             # Get the main category
             main_data_group = query_data["dataType"]
+            # Get the time stamp
+            time_stamp = query_data["timeStamp"]
             # If a sub category exists
             if "dataType2" in query_data.keys():
                 # Get sub category
@@ -107,14 +128,19 @@ class ThreeColumnApp(QWidget):
                 if main_data_group not in self.file_data:
                     # if not already in the category dictionary -> initialize it with sub category
                     self.file_data[main_data_group] = {}
+                    time_stamp_dict[main_data_group] = {}
 
                 # if the main category does not have the subcategory in its dictionary, add it
                 if sub_data_group not in self.file_data[main_data_group].keys():
                     self.file_data[main_data_group][sub_data_group] = []
+                    time_stamp_dict[main_data_group][sub_data_group] = []
 
                 # Add data found to the subcategory
                 for datapoint in data:
                     self.file_data[main_data_group][sub_data_group].append(str(datapoint))
+                    time_stamp_dict[main_data_group][sub_data_group].append(time_stamp)
+
+
 
     def on_file_click(self, item):
         '''Function gets the data from the selected file and stores it in a dictionary.'''
@@ -147,7 +173,9 @@ class ThreeColumnApp(QWidget):
 
         categories = QListWidget()
         for main_category in file_data.keys():
-            categories.addItem(main_category)
+            item = QListWidgetItem(main_category)
+            item.setCheckState(Qt.Unchecked)
+            categories.addItem(item)
 
         return categories
 
@@ -164,20 +192,11 @@ class ThreeColumnApp(QWidget):
             if data_list:
                 for datapoint in data_list:
                     for key, value in eval(datapoint).items():
-                        data_widget.append(f" {key}: {value}")
+                        data_widget.append(f"    {key}: {value}")
                     data_widget.append("")
             data_widget.append("")
 
-        data_widget.textChanged.connect(self.on_data_widget_changed)
-
         return data_widget
-
-    def on_data_widget_changed(self):
-        '''Not implemented yet.'''
-        self.parse_data()
-
-        # new_text = self.data_widget.toPlainText()
-        # print(f"Data widget content changed to: {new_text}")
 
     def update_category_column(self, column_widget):
         '''Function updates the category column with the new category widget.'''
@@ -238,6 +257,7 @@ class ThreeColumnApp(QWidget):
                 current_entry["data"].append(current_data_entry)
             parsed_data.append(current_entry)
         print(json.dumps(parsed_data, indent=4))
+        return parsed_data
 
     # Removes the data to be replaced by updated data.
     def remove_old_data(self):
@@ -245,6 +265,10 @@ class ThreeColumnApp(QWidget):
         for datapoint in self.data[self.selected_file]["extractData"]:
             if datapoint["dataType"] == self.selected_category:
                 self.data[self.selected_file]["extractData"].remove(datapoint)
+    
+    def update_data(self, data):
+        '''Function updates the data in the file data.'''
+        self.data[self.selected_file]["extractData"] # TODO: Finish this function
 
 
 
