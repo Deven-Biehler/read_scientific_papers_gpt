@@ -72,15 +72,9 @@ class ThreeColumnApp(QWidget):
 
     def on_save_button_click(self):
         '''Function to handle load button click.'''
-        parsed_data = self.parse_data()
-        current_item = self.category_widget.currentItem()
-        if current_item is not None:
-            current_item.setCheckState(Qt.Checked)
-        # Label the data as human checked
-        for datapoint in parsed_data:
-            datapoint["Human Checked"] = True
         # Save New Data to database
         self.update_data()
+        self.write_back_to_file()
 
     def on_load_button_click(self):
         '''Function opens a file dialog to select a JSON file.'''
@@ -260,9 +254,20 @@ class ThreeColumnApp(QWidget):
     def update_data(self):
         '''Function updates the data in the file data.'''
         parsed_data = self.parse_data()
+        current_item = self.category_widget.currentItem()
+        if current_item is not None:
+            current_item.setCheckState(Qt.Checked)
+        # Label the data as human checked
+        for i in range(len(parsed_data)):
+            parsed_data[i]["humanChecked"] = True
         self.remove_old_data()
         self.file_data += parsed_data
         self.data[self.selected_file]["extractData"] = self.file_data
+
+    def write_back_to_file(self):
+        '''Function writes the data back to the input file.'''
+        with open(self.input_file_name, 'w', encoding='utf-8') as file:
+            json.dump(self.data, file, indent=4)
             
 
 
