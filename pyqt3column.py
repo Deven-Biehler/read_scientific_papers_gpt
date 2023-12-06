@@ -105,7 +105,8 @@ class ThreeColumnApp(QWidget):
         item_text = item.text()
         print(f'Item Clicked: {item_text}')
 
-        self.get_file_data(int(item_text[0]))
+        index = int(item_text.split(":")[0])
+        self.get_file_data(index)
         category_widget = self.get_category_widget(self.file_data)
         self.update_category_column(category_widget)
 
@@ -123,6 +124,8 @@ class ThreeColumnApp(QWidget):
 
         file_names = QListWidget()
         for i, data_dict in enumerate(data):
+            if (data_dict[key] == "./papers\\fe5acf95fbb635d01a8603ca0b537e28.pdf"):
+                print()
             file_names.addItem(str(i) + ": " + data_dict[key])
 
         return file_names

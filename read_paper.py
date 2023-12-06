@@ -107,7 +107,7 @@ def main():
                 fp = open(file_path_no_extension + ".pdf", 'rb')
                 parser = PDFParser(fp)
                 doc = PDFDocument(parser)
-                outDict['MetaData'] = doc.info[0] # Meta data not working, need to fix
+                #outDict['MetaData'] = doc.info[0] # Meta data not working, need to fix
 
                 print(doc.info)  # The "Info" metadata
 
