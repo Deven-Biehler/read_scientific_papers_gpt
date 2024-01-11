@@ -1,3 +1,4 @@
+import os
 import sys
 import json
 from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QFrame, QListWidget, QListWidgetItem, QTreeWidget, QTreeWidgetItem, QPushButton, QFileDialog, QTextEdit, QVBoxLayout
@@ -104,10 +105,13 @@ class ThreeColumnApp(QWidget):
         '''Function gets the data from the selected file and stores it in a dictionary.'''
         item_text = item.text()
         print(f'Item Clicked: {item_text}')
-
-        self.get_file_data(int(item_text[0]))
+        
+        index, file_path = item_text.split(": ")
+        index = int(index)
+        self.get_file_data(index)
         category_widget = self.get_category_widget(self.file_data)
         self.update_category_column(category_widget)
+        self.open_pdf(file_path)
 
     def on_category_click(self, item):
         '''Function gets the data from the selected category and stores it in a dictionary.'''
@@ -123,6 +127,8 @@ class ThreeColumnApp(QWidget):
 
         file_names = QListWidget()
         for i, data_dict in enumerate(data):
+            if (data_dict[key] == "./papers\\fe5acf95fbb635d01a8603ca0b537e28.pdf"):
+                print()
             file_names.addItem(str(i) + ": " + data_dict[key])
 
         return file_names
@@ -133,7 +139,8 @@ class ThreeColumnApp(QWidget):
         categories = QListWidget()
         main_categories = []
         for datapoint in file_data:
-            main_categories.append(datapoint["dataType"])
+            if "dataType" in datapoint:
+                main_categories.append(datapoint["dataType"])
         for main_category in set(main_categories):
             item = QListWidgetItem(main_category)
             item.setCheckState(Qt.Unchecked)
@@ -268,7 +275,15 @@ class ThreeColumnApp(QWidget):
         '''Function writes the data back to the input file.'''
         with open(self.input_file_name, 'w', encoding='utf-8') as file:
             json.dump(self.data, file, indent=4)
-            
+    
+    def open_pdf(self, file_path):
+        '''Function opens the pdf file.'''
+        if os.path.exists(file_path):
+            # Open the file with the default PDF viewer
+            os.system(f"start {file_path}")
+        else:
+            print(f"The file '{file_path}' does not exist.")
+        pass
 
 
 
